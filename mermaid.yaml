@@ -1,0 +1,9 @@
+enabled: true
+align: center              # left, center or right
+light_theme: default       # Mermaid colour theme for light mode: default, neutral, forest or base
+dark_theme: dark           # Mermaid colour theme for dark mode
+look: classic              # classic or hand-drawn
+font: site                 # site (the page's font) or mermaid (Mermaid's own)
+width: fit                 # fit (shrink to the column) or natural (full size, scrolls sideways when wide)
+dark_mode: auto            # auto (match the theme), system, dark or light
+mermaid_tags: true         # also draw [mermaid]...[/mermaid] tags from the Mermaid Diagrams plugin

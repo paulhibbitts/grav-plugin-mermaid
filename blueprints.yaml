@@ -1,0 +1,110 @@
+name: Mermaid
+slug: mermaid
+type: plugin
+version: 0.9.0
+description: 'Draws Mermaid diagrams, such as flowcharts, timelines and sequence diagrams, from ```mermaid blocks in a page, in light or dark mode to match the theme.'
+icon: sitemap
+author:
+  name: HibbittsDesign.org
+  email: hello@hibbittsdesign.org
+  url: https://hibbittsdesign.org
+homepage: https://github.com/paulhibbitts/grav-plugin-mermaid
+keywords: mermaid, diagrams, flowcharts, charts, dark mode
+bugs: https://github.com/paulhibbitts/grav-plugin-mermaid/issues
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.7.0' }
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: 'Plugin Status'
+      highlight: 1
+      default: 1
+      options:
+        1: 'Enabled'
+        0: 'Disabled'
+      validate:
+        type: bool
+
+    align:
+      type: select
+      label: 'Diagram Alignment'
+      default: center
+      options:
+        left: 'Left'
+        center: 'Centre'
+        right: 'Right'
+
+    light_theme:
+      type: select
+      label: 'Light Mode Colours'
+      help: 'Mermaid colour theme used in light mode.'
+      default: default
+      options:
+        default: 'Default'
+        neutral: 'Neutral'
+        forest: 'Forest'
+        base: 'Base'
+
+    dark_theme:
+      type: select
+      label: 'Dark Mode Colours'
+      help: 'Mermaid colour theme used in dark mode.'
+      default: dark
+      options:
+        dark: 'Dark'
+        neutral: 'Neutral'
+        base: 'Base'
+
+    look:
+      type: select
+      label: 'Look'
+      help: 'Hand-drawn gives diagrams a sketch style.'
+      default: classic
+      options:
+        classic: 'Classic'
+        hand-drawn: 'Hand-drawn'
+
+    font:
+      type: select
+      label: 'Font'
+      default: site
+      options:
+        site: 'Site Font'
+        mermaid: 'Mermaid Font'
+
+    width:
+      type: select
+      label: 'Diagram Width'
+      help: 'Natural size scrolls sideways when wide.'
+      default: fit
+      options:
+        fit: 'Fit to Page'
+        natural: 'Natural Size'
+
+    dark_mode:
+      type: select
+      label: 'Dark Mode'
+      help: 'Auto matches the theme.'
+      default: auto
+      options:
+        auto: 'Auto (Match Theme)'
+        system: 'Follow System'
+        dark: 'Always Dark'
+        light: 'Always Light'
+
+    mermaid_tags:
+      type: toggle
+      label: '[mermaid] Tags'
+      help: 'Also draw tags from the Mermaid Diagrams plugin.'
+      highlight: 1
+      default: 1
+      options:
+        1: 'Enabled'
+        0: 'Disabled'
+      validate:
+        type: bool
